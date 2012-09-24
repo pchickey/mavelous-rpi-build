@@ -23,7 +23,7 @@ You may then use bitbake to build an image for your Raspberry Pi.
 ```
   $ bitbake rpi-basic-image
 ```
-The resulting image will be found in `rpi-build/tmp/deploy/images/`.
+The resulting image will be found in `mavelous-rpi-build/tmp/deploy/images/`.
 
 Use the `dd` tool to write the newly created image to an SD card. Make sure
 the SD card's partitions are all unmounted before you begin. On my machine, the SD card is found at `/dev/mmcblk0` - yours may be elsewhere.
