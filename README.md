@@ -11,12 +11,13 @@ You'll need to clone the Poky trunk in this repository's parent directory:
 ```  
   $ git clone git://git.yoctoproject.org/poky
 ```
-Then, while still in the rpi-build parent directory, use the Poky
+Then, while still in the `mavelous-rpi-build` parent directory, use the Poky
 `oe-init-build-env` tool to setup your shell's environment.
 ```
-  $ source poky/oe-init-build-env rpi-build
+  $ source poky/oe-init-build-env `mavelous-rpi-build`
 ```
-Your current directory will be changed to rpi-build as part of this script.
+Your current directory will be changed to mavelous-rpi-build as part of this
+script.
 
 You may then use bitbake to build an image for your Raspberry Pi.
 ```
@@ -30,4 +31,7 @@ the SD card's partitions are all unmounted before you begin. On my machine, the 
   $ dd bs=1M if=tmp/deploy/images/rpi-basic-image-raspberrypi.rpi.sdimage of=/dev/mmcblk0
 ```
 
-You should then be able to insert the card into your raspberry pi and 
+You should then be able to insert the card into your raspberry pi and it will
+boot, show a splash screen, and then a console. The `root` user will have no
+password.
+
